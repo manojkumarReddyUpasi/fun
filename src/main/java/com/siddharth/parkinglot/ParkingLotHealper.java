@@ -12,12 +12,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
-/**
- * Created by Siddharth on 12/8/17.
- */
+
 public class ParkingLotHealper {
 
-    static IParkingLot parkingLot;
+    static CarParkingLot parkingLot;
     public static void main(String[] args)
     {
         parkingLot = new ParkingLotImpl();

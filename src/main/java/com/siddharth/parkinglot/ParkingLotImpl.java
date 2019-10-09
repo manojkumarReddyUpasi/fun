@@ -6,16 +6,14 @@ import com.siddharth.parkinglot.exception.ParkingNotAvailableException;
 
 import java.util.*;
 
-/**
- * Created by Siddharth on 12/7/17.
- */
-public class ParkingLotImpl implements IParkingLot{
+
+public class ParkingLotImpl implements CarParkingLot{
 
     private Map<Slot, Car> slotCarMap;
     private Map<String, List<Car>> colorCarListMap;
     private Map<String, Slot> registrationNumberSlotMap;
 
-    //This will be used to get the free slot with O(1) time complexity
+    
     PriorityQueue<Integer> freeSlots = new PriorityQueue<Integer>();
 
 
@@ -79,16 +77,6 @@ public class ParkingLotImpl implements IParkingLot{
         else
             return -1;
 
-        /*int retVal = -1;
-        for(Map.Entry<Slot, Car> e : slotCarMap.entrySet())
-        {
-            if(e.getValue() == null)
-            {
-                retVal = e.getKey().getId();
-                break;
-            }
-        }
-        return retVal;*/
 
     }
 
